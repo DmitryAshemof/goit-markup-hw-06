@@ -182,13 +182,15 @@ p {
 }
 
 
-  /* HERO */
+  /* ======================HERO============================= */
 
  .hero {
-    padding: 188px 0 188px;
+    /* padding: 188px 0 188px; */
+    padding: 72px 16px;
+  
     margin: 0 auto;
-    max-width: 1440px;
-    height: 600px;
+    max-width: 320px;
+    /* height: 600px; */
     background-color: #2E2F42;
     background-image: linear-gradient(
         /* to right, */
@@ -237,7 +239,8 @@ p {
     gap: 10px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    margin-top: 48px;
+    /* margin-top: 48px; */
+    margin-top: 72px;
     margin-left: auto;
     margin-right: auto;
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -927,13 +930,22 @@ p {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-           /* =======================TABLET======================== */
+/* =======================TABLET======================== */
 
 @media screen and (min-width: 768px) {
  .container {
    max-width: 768px;
+   padding: 0;
  }
-             /* -----------------advantage-------------------- */
+/* -----------------------hero-------------------------- */
+ .hero {
+    display: flex;
+    justify-content: center;
+    padding: 112px 136px;
+    min-width: 768px;
+ }
+
+/* ---------------------advantage------------------------- */
  .advantage {
      padding-top: 96px;
      padding-bottom: 96px;
@@ -964,8 +976,27 @@ p {
 
  @media screen and (min-width: 1158px) {
   .container {
-     max-width: 1158px;
+     min-width: 1158px;
   }
+  /* ------------------------hero----------------------- */
+  .hero {
+      padding: 188px 0 188px;
+      margin: 0 auto;
+      max-width: 1440px;
+      height: 600px;
+      background-color: #2E2F42;
+      background-image: linear-gradient(
+              /* to right, */
+              rgba(46, 47, 66, 0.7),
+              rgba(46, 47, 66, 0.7)),
+          url(../images/peopleoffice.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+ .button {
+    margin-top: 48px;
+ }
   /* -----------------advantage-------------------- */
   .advantage {
       padding-top: 120px;
