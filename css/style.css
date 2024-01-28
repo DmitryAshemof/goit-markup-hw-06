@@ -47,8 +47,11 @@ p {
     color: #434455;
 }
 .container {
-    max-width: 1158px;
-    padding: 0 15px;
+    /* max-width: 1158px; */
+    /* padding: 0 15px; */
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 
@@ -246,11 +249,13 @@ p {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- /* ADVANTAGE */
+ /* ========================ADVANTAGE======================== */
 
 .advantage {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
     
 }
 
@@ -275,7 +280,8 @@ p {
 }
 
 .icon-box {
-    display: flex;
+    /* display: flex; */
+    display: none;
     margin-bottom: 8px;
     width: 264px;
     height: 112px;
@@ -290,32 +296,42 @@ p {
 }
 
  .advantage-post-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    /* font-size: 20px;
+    font-weight: 500; */
+    /* line-height: 1.2; */
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.045em;
+    text-transform: capitalize;
     color: #2E2F42;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 8px;
  }
 
  .advantage-list {
     display: flex;
-    gap: 24px; 
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* gap: 24px;  */
+    gap: 72px;
   
  }
 
  .advantage-item {
-     width: calc((100% - 72px) / 4);
+     /* width: calc((100% - 72px) / 4); */
  }
 
  .advantage-text {
     font-size: 16px;
     line-height: 1.5;
+    font-weight: 500;
     letter-spacing: 0.02em;
     color: #434455;
  }
 
-  /* OUR TEAM */
+  /* ==========================OUR TEAM=============================== */
 
 .team .container {
     margin-left: auto;
@@ -323,8 +339,10 @@ p {
 }
 
 .team{
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-bottom: 96px;
+    padding-top: 96px;
     background-color: #F4F4FD;
 }
 
@@ -340,12 +358,15 @@ p {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
+    /* gap: 24px; */
 }  
 
 
 .team-card {
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
     border-radius: 0px 0px 4px 4px;
     background: var(--WHITE, #FFF);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -412,11 +433,13 @@ p {
     background-color: #FFFFFF;
 }
 
-  /* PORTFOLIO */
+  /* ============================PORTFOLIO============================== */
 
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio .container {
@@ -903,3 +926,73 @@ p {
     background-color: #404BBF;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+           /* =======================TABLET======================== */
+
+@media screen and (min-width: 768px) {
+ .container {
+   max-width: 768px;
+ }
+             /* -----------------advantage-------------------- */
+ .advantage {
+     padding-top: 96px;
+     padding-bottom: 96px;
+
+ }
+
+ .advantage-list {
+     display: flex;
+     flex-direction: row;
+     column-gap: 24px;
+     row-gap: 72px;
+}
+
+ .advantage-item {
+     width: calc((100% - 24px) / 2);
+ }
+
+ .advantage-text {
+     max-width: 356px;
+ }
+    /*-------------------------team-------------------------- */
+  .team-list {
+      gap: 24px;
+  }
+ }
+
+/* =============================DESCKTOP========================== */
+
+ @media screen and (min-width: 1158px) {
+  .container {
+     max-width: 1158px;
+  }
+  /* -----------------advantage-------------------- */
+  .advantage {
+      padding-top: 120px;
+      padding-bottom: 120px;
+  }
+
+   .icon-box {
+     display: flex;
+     margin-bottom: 8px;
+     width: 264px;
+     height: 112px;
+     flex-shrink: 0;
+     justify-content: center;
+     align-items: center;
+     border-radius: 4px;
+     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+     background: var(--CLOUD, #F4F4FD);
+ }
+   .advantage-item {
+     width: calc((100% - 72px) / 4);
+  }
+  /*-------------------------team-------------------------- */
+   .team {
+      padding-top: 120px;
+      padding-bottom: 120px;
+}
+   .team-card {
+       width: calc((100% - 72px) / 4);
+}
+ }
