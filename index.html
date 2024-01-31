@@ -47,7 +47,7 @@
      -->
  <main>
 
-                <!-- HERO -->
+<!--================== HERO ==================-->
        
   <section class="hero"> 
 
@@ -59,9 +59,9 @@
     </div>
  </section>
 
-               <!-- SECTION 2 -->
+<!--============== SECTION 2 ADVANTAGE ==============-->
 
-   <section class="advantage">
+ <section class="advantage">
 
      <div class="container">
 
@@ -128,10 +128,9 @@
               </li>
           </ul>
       </div>
-
  </section>
 
-                    <!-- SECTION 3 -->
+<!--================== SECTION 3 TEAM ================-->
 
 <section class="team">
        
@@ -140,14 +139,15 @@
    <h2 class="title">Our Team</h2>
 
      <ul class="team-list">
-        <!---------------------- Mark Guerro ------------------------>
+<!---------------------- Mark Guerro ------------------------>
        <li class="team-card">
          <img srcset="./images/MarkGuerrero.jpg 1x, 
                      ./images/MarkGuerrero-x2.jpg 2x"
           src="./images/MarkGuerrero.jpg"
           alt="Mark Guerrero" 
           width="264" 
-          height="260" />
+          height="260"
+          class="team-card-img"/>
 
 <div class="employer">
                     
@@ -190,7 +190,7 @@
          </ul>
      </div>
  </li>
-<!------------------------- Tom Ford -------------------------->
+<!-------------------- Tom Ford ------------------------>
   <li class="team-card">
 
     <img srcset="./images/TomFord.jpg 1x, 
@@ -198,7 +198,8 @@
       src="./images/TomFord.jpg" 
       alt="Tom Ford" 
       width="264" 
-      height="260" />
+      height="260"
+      class="team-card-img"/>
   
  <div class="employer">
 
@@ -241,15 +242,16 @@
      </ul>
    </div>
  </li>
-<!----------------------------- Camila Garcia ----------------------------->
+<!------------------------ Camila Garcia ------------------------->
     <li class="team-card">
 
   <img srcset="./images/CamilaGarcia.jpg 1x, 
-              ./images/CamilaGarcia-x2.jpg"
+              ./images/CamilaGarcia-x2.jpg 2x"
         src="./images/CamilaGarcia.jpg" 
         alt="Camila Garcia" 
         width="264" 
-        height="260" />
+        height="260"
+        class="team-card-img"/>
 
        <div class="employer">
             <h3 class="name">Camila Garcia</h3>
@@ -300,7 +302,8 @@
        src="./images/DanielWilson.jpg" 
        alt="Daniel Wilson" 
        width="264" 
-       height="260" />
+       height="260"
+       class="team-card-img"/>
 
     <div class="employer">
 
@@ -348,30 +351,39 @@
 
         </section>
 
-               <!-- SECTION 4 -->
+<!--=================== SECTION 4 PORTFOLIO ==================-->
 
-  <section class="portfolio">
+ <section class="portfolio">
 
-      <div class="container">
+   <div class="container">
     
-          <h2 class="title">Our Portfolio</h2>
+      <h2 class="title">Our Portfolio</h2>
     
-                <ul class="app-list">
+        <ul class="app-list">
+<!----------------------- banking app ------------------------>
+  <li class="app-item">
 
-                    <li class="app-item">
-
- <div class="app-item-wrap">
+   <div class="app-item-wrap">
     
     <picture>
-     <source srcset="./images/mob-banking-app.jpg 1x,
-                    ./images/mob-banking-app.jpg-x2 2x" 
+    <source srcset="./images/desck-banking-app.jpg 1x,
+                   ./images/desck-banking-app-x2.jpg 2x" 
+                    media="(min-width: 1158px)">
+
+    <source srcset="./images/tab-banking-app.jpg 1x,
+                   ./images/tab-banking-app-x2.jpg 2x" 
+                    media="(min-width: 768px)">
+
+    <source srcset="./images/mob-banking-app.jpg 1x,
+                    ./images/mob-banking-app-x2.jpg 2x" 
                     media="(max-width: 320px)">
+            
+    <img src="./images/desck-banking-app.jpg" 
+         alt="Banking App" 
+         width="360" 
+         height="300" 
+         class="app-img" />
     </picture>
-        <img 
-           src="./images/mob-banking-app.jpg" 
-           alt="Banking App" 
-           width="288" 
-           height="280"/>
                                                                
          <p class="app-item-text">
              14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -379,26 +391,34 @@
                                
  </div>
                        
-
     <div class="app-box">
          <h3 class="app">Banking App</h3>
          <p class="app-text">App</p>
     </div>
  </li>
-
+<!--------------- cashless payment --------------->
  <li class="app-item">
 
    <div class="app-item-wrap">
+
     <picture>
-        <source srcset="./images/mob-cashless-payment.jpg 1x, 
-                       ./images/mob-cashless-payment-x2 2x.jpg"
+      <source srcset="./images/desck-cashless-payment.jpg 1x, 
+                     ./images/desck-cashless-payment-x2.jpg 2x" 
+                      media="(min-width: 1158px)">
+
+      <source srcset="./images/tab-cashless-payment.jpg 1x, 
+                     ./images/tab-cashless-payment-x2.jpg 2x" 
+                      media="(min-width: 768px)">
+
+      <source srcset="./images/mob-cashless-payment.jpg 1x, 
+                       ./images/mob-cashless-payment-x2.jpg 2x"
                        media="(max-width: 320px)">
-    </picture>
-                           
-      <img src="./images/mob-cashless-payment.jpg" 
+      <img src="./images/desck-cashless-payment.jpg" 
            alt="Cashless Payment" 
-           width="288" 
-           height="280"/>
+           width="360" 
+           height="300" 
+           class="app-img" />
+    </picture>
                                            
          <p class="app-item-text">
              14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit
@@ -412,51 +432,68 @@
          <p class="app-text">Marketing</p>
     </div>
  </li>
-
+<!---------------------- meditation app --------------------->
  <li class="app-item">
 
    <div class="app-item-wrap">
 
     <picture>
+        <source srcset="./images/desck-meditation-app.jpg 1x, 
+                       ./images/desck-meditation-app-x2.jpg 2x" 
+                        media="(min-width: 1158px)">
+        
+        <source srcset="./images/tab-meditation-app.jpg 1x, 
+                       ./images/tab-meditation-app-x2.jpg 2x"
+                        media="(min-width: 768px)">
+
         <source srcset="./images/mob-meditation-app.jpg 1x, 
-                       ./images/mob-meditation-app-x2 2x.jpg"
+                       ./images/mob-meditation-app-x2.jpg 2x"
                        media="(max-width: 320px)" >
-    </picture>
-                         
-      <img src="./images/mob-meditation-app.jpg" 
+                     
+      <img src="./images/desck-meditation-app.jpg" 
            alt="Meditation App" 
-           width="288" 
-           height="280"/>
-                                                               
+           width="360" 
+           height="300"
+           class="app-img"/>
+    </picture>
+
          <p class="app-item-text">
              14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit
              Ecommerce App · Cloud Storage App
          </p>
                              
  </div>
-                                 
-                  
+                                    
     <div class="app-box">
          <h3 class="app">Meditation App</h3>
          <p class="app-text">App</p>
     </div>
  </li>
-
+<!--------------------- taxi service -------------------->
 <li class="app-item">
 
    <div class="app-item-wrap">
 
     <picture>
-        <source srcset="./images/mob-taxi-service.jpg 1x, 
-                       ./images/mob-taxi-service-x2 2x.jpg"
-                        media="=(max-width: 320px)">
-    </picture>
-                           
-      <img src="./images/mob-taxi-service.jpg" 
+      <source srcset="./images/desck-taxi-service.jpg 1x, 
+                     ./images/desck-taxi-service-x2.jpg 2x" 
+                      media="(min-width: 1158px)">
+        
+      <source srcset="./images/tab-taxi-service.jpg 1x, 
+                     ./images/tab-taxi-service-x2.jpg 2x" 
+                      media="(min-width: 768px)">
+
+      <source srcset="./images/mob-taxi-service.jpg 1x, 
+                     ./images/mob-taxi-service-x2.jpg 2x"
+                      media="=(max-width: 320px)">
+                    
+      <img src="./images/desck-taxi-service.jpg" 
            alt="Taxi Service" 
-           width="288" 
-           height="280"/>
-                                                 
+           width="360" 
+           height="300"
+           class="app-img"/>
+    </picture>
+
          <p class="app-item-text">
              14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit
              Ecommerce App · Cloud Storage App
@@ -469,23 +506,31 @@
          <p class="app-text">Marketing</p>
      </div>
  </li>
-
+<!----------------- screen illustration ------------------->
  <li class="app-item">
-
-                 
+          
  <div class="app-item-wrap">
 
     <picture>
-        <source srcset="./images/mob-screen-illustrations.jpg 1x, 
-                       ./images/mob-screen-illustrations-x2. 2xjpg"
+     <source srcset="./images/desck-screen-illustrations.jpg 1x, 
+                       ./images/desck-screen-illustration-x2.jpg 2x"  
+                         media="(min-width: 1158px)">
+        
+      <source srcset="./images/tab-taxi-service.jpg 1x, 
+                       ./images/tab-taxi-service-x2.jpg 2x" 
+                         media="(min-width: 768px)">
+ 
+      <source srcset="./images/mob-screen-illustrations.jpg 1x, 
+                       ./images/mob-screen-illustrations-x2.jpg 2x"
                         media="(max-width: 320px)">
-    </picture>
-      
-     <img src="./images/mob-screen-illustrations.jpg" 
+    
+     <img src="./images/desck-screen-illustrations.jpg" 
           alt="Screen Illustrations" 
-          width="288" 
-          height="280"/>           
-                            
+          width="360" 
+          height="300"
+          class="app-img"/>           
+    </picture>
+
              <p class="app-item-text">
                  14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit
                  Ecommerce App · Cloud Storage App
@@ -497,29 +542,36 @@
         <p class="app-text">Design</p>
     </div>
  </li>
-
+<!---------------------- online courses -------------------->
   <li class="app-item">
 
      <div class="app-item-wrap">
         
       <picture>
+        <source srcset="./images/desck-online-courses.jpg 1x, 
+                       ./images/desck-online-course-x2.jpg 2x" 
+                        media="(min-width: 1158px)">
+            
+        <source srcset="./images/tab-online-courses.jpg 1x, 
+                       ./images/tab-online-courses-x2.jpg 2x" 
+                        media="(min-width: 768px)">
+
         <source srcset="./images/mob-online-courses.jpg 1x, 
                        ./images/mob-online-courses-x2.jpg 2x"
                         media="(max-width: 320px)">
-      </picture>  
 
-        <img src="./images/mob-online-courses.jpg" 
+        <img src="./images/desck-online-courses.jpg" 
              alt="Online Courses" 
-             width="288" 
-             height="280"/>
-                                           
+             width="360" 
+             height="300"
+             class="app-img"/>
+      </picture>
+
             <p class="app-item-text">
                 14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit
                 Ecommerce App · Cloud Storage App
             </p>                 
-  </div>
-                              
-                            
+  </div>           
                         
                         <div class="app-box">
                             <h3 class="app">Online Courses</h3>

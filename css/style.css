@@ -462,25 +462,30 @@ p {
     margin-right: auto;
 }
 
-.title{
+.title {
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: 0.02em;
+    /* letter-spacing: 0.02em; */
+    letter-spacing: 0.045em;
+    font-weight: 700;
     text-align: center;
     text-transform: capitalize;
     color: #2E2F42;
+    margin-bottom: 52px;
   }
 
 .app-list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    justify-content: center;
+    row-gap: 52px;
+    /* row-gap: 48px; */
+    /* column-gap: 24px; */
 }
 
 
 .app-item {
-    width: calc((100% - 48px) / 3);
+    /* width: calc((100% - 48px) / 3); */
     border: 1px solid var(--CORNFLOWER, #E7E9FC);
     background: var(--WHITE, #FFF);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -495,6 +500,10 @@ p {
 .app-item:hover .text-wrap {
     transform: translateY(0%);
    
+}
+
+.app-img {
+    max-width: 288px;
 }
 
 .app-item-wrap {
@@ -950,13 +959,13 @@ p {
    padding: 0;
  }
 /* -----------------------hero-------------------------- */
+
  .hero {
     display: flex;
     justify-content: center;
     padding: 112px 136px;
     min-width: 768px;
     background-image: linear-gradient(
-                /* to right, */
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/tabbgimg.jpg);
@@ -985,7 +994,8 @@ p {
     text-transform: none;
  }
 
-/* ---------------------advantage------------------------- */
+/* --------------------- advantage ------------------------- */
+
  .advantage {
      padding-top: 96px;
      padding-bottom: 96px;
@@ -1006,13 +1016,23 @@ p {
  .advantage-text {
      max-width: 356px;
  }
-    /*-------------------------team-------------------------- */
+/*------------------------- team -------------------------- */
+
   .team-list {
       gap: 24px;
   }
+/* --------------------- portfolio ------------------------ */
+  .app-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .app-img {
+    min-width: 356px;
+  }
  }
 
-/* =============================DESCKTOP========================== */
+/* ============================= DESCKTOP ========================== */
 
  @media screen and (min-width: 1158px) {
   .container {
@@ -1038,44 +1058,65 @@ p {
                   (min-resolution: 2dppx),
                   (min-resolution: 192dpi)
  {
-  .hero {
-      background-color: #2E2F42;
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-              rgba(46, 47, 66, 0.7)),
-          url(../images/descktop-bg-img-x2.jpg);
+.hero {
+   background-color: #2E2F42;
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+           rgba(46, 47, 66, 0.7)),
+       url(../images/descktop-bg-img-x2.jpg);
 }
   }
 
- .button {
-    margin-top: 48px;
+.button {
+   margin-top: 48px;
  }
-  /* -----------------advantage-------------------- */
-  .advantage {
-      padding-top: 120px;
-      padding-bottom: 120px;
+/* ----------------- advantage ------------------ */
+.advantage {
+  padding-top: 120px;
+  padding-bottom: 120px;
   }
 
-   .icon-box {
-     display: flex;
-     margin-bottom: 8px;
-     width: 264px;
-     height: 112px;
-     flex-shrink: 0;
-     justify-content: center;
-     align-items: center;
-     border-radius: 4px;
-     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
-     background: var(--CLOUD, #F4F4FD);
+.icon-box {
+   display: flex;
+   margin-bottom: 8px;
+   width: 264px;
+   height: 112px;
+   flex-shrink: 0;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+   background: var(--CLOUD, #F4F4FD);
  }
-   .advantage-item {
+.advantage-item {
      width: calc((100% - 72px) / 4);
   }
-  /*-------------------------team-------------------------- */
-   .team {
-      padding-top: 120px;
-      padding-bottom: 120px;
+
+/*-------------------- team --------------------- */
+.team {
+  padding-top: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-   .team-card {
-       width: calc((100% - 72px) / 4);
+.team-card {
+  width: calc((100% - 72px) / 4);
+}
+.team-card-img {
+    min-width: 100%;
+}
+
+/* ------------------ portfolio ---------------------*/
+
+.title {
+    margin-bottom: 72px;
+}
+.app-list {
+    row-gap: 48px;
+    column-gap: 24px;
+}
+.app-img {
+    min-width: 100%;
+}
+.app-item {
+    width: calc((100% - 48px) / 3);
 }
  }
