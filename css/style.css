@@ -43,10 +43,8 @@ p {
 }
 .container {
     /* max-width: 1158px; */
-    /* padding: 0 15px; */
+    padding: 0 16px;
     max-width: 320px;
-    padding-left: 16px;
-    padding-right: 16px;
     margin: 0 auto;
 }
 
@@ -54,7 +52,7 @@ p {
 
 .header {
     display: flex;
-    height: 72px;
+    height: 56px;
     background: #FFF;
     border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -62,9 +60,8 @@ p {
 }
 
 .header .container {
-    display: flex;
     width: 1158px;
-    padding: 0 15px 0 15px;
+    display: flex;
     margin: 0 auto;
     justify-content: space-between;
   
@@ -192,8 +189,8 @@ p {
     display: flex;
     flex-direction: column;
     position: fixed;
-    max-width: 100%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
     padding: 24px 24px 40px 16px;
     background-color: #fff;
@@ -234,6 +231,9 @@ p {
     letter-spacing: 0.045em;
     text-transform: capitalize;
   
+}
+.mob-current {
+    color: #404bbf;
 }
 
 .mob-nav-link:hover,
@@ -424,7 +424,7 @@ p {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
-    letter-spacing: 0.045em;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2E2F42;
     margin-left: auto;
@@ -468,7 +468,7 @@ p {
     background-color: #F4F4FD;
 }
 
-  .title {
+.title {
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -572,8 +572,7 @@ p {
 .title {
     font-size: 36px;
     line-height: 1.11;
-    /* letter-spacing: 0.02em; */
-    letter-spacing: 0.045em;
+    letter-spacing: 0.02em;
     font-weight: 700;
     text-align: center;
     text-transform: capitalize;
@@ -669,16 +668,16 @@ p {
  .footer {
   
     /* padding: 100px 0 100px; */
-    padding: 97px 16px;
+    padding: 97px 0 97px;
     background-color: #2E2F42;
  }
 
  .footer .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
     /* align-items: baseline; */
  }
 
@@ -708,8 +707,8 @@ p {
     /* max-width: 264px; */
     /* line-height: 1.5;
     letter-spacing: 0.02em; */
-    max-width: 288px;
-    margin-bottom: 72px;
+    /* max-width: 288px; */
+    margin: 0 auto;
     color: #F4F4FD;
  }
 
@@ -719,7 +718,6 @@ p {
     gap: 16px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 72px;
 }
 
  .footer-media-text {
@@ -769,7 +767,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-left: auto;
+    
 
 }
 
@@ -778,7 +776,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-left: auto;
+   
 }
 
 .footer-form-title {
@@ -856,8 +854,9 @@ p {
 /* -----footer modal----- */
 
 .modal {
+    display: none;
     position: fixed;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 24px;
@@ -1098,11 +1097,13 @@ p {
 @media screen and (min-width: 768px) {
  .container {
    max-width: 768px;
-   padding: 0;
+   padding: 0 16px;
  }
 
  /*--------------------- header ----------------------*/
-
+.header {
+    height: 72px;
+}
 .logo {
     margin-right: 120px;
 }
@@ -1120,15 +1121,16 @@ p {
     display: flex;
     flex-direction: column;
     padding: 0;
-    gap: 0;
+    gap: 12px;
 }
 
 .address-link {
+    display: block;
     color: #434455;
     font-family: Roboto;
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.48px;
+  
 }
 
 .mob-menu-open-btn {
@@ -1140,7 +1142,7 @@ p {
  .hero {
     display: flex;
     justify-content: center;
-    padding: 112px 136px;
+    padding: 112px 0;
     min-width: 768px;
     background-image: linear-gradient(
                 rgba(46, 47, 66, 0.7),
@@ -1193,10 +1195,10 @@ p {
  .advantage-post-title {
      color: #2E2F42;
      font-family: Roboto;
+     text-align: center;
      font-size: 36px;
      font-weight: 700;
      line-height: 1.1;
-     letter-spacing: 0.045em;
      text-transform: capitalize;
  }
 
@@ -1206,21 +1208,32 @@ p {
 /*------------------------- team -------------------------- */
 
 .team-list {
-      gap: 24px;
+      gap: 64px 24px;
   }
 /* --------------------- portfolio ------------------------ */
 .app-list {
     row-gap: 72px;
     column-gap: 24px;
   }
-
+.app-item {
+    border: none
+}
 .app-img {
     min-width: 356px;
   }
 
   /*--------------------- footer --------------------*/
-.footer {
+/* .footer {
     padding: 96px 164px 96px 108px;
+} */
+.footer .container {
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 530px;
+    gap: 72px;
 }
 
 .footer-logo-icon-wrap {
@@ -1231,16 +1244,15 @@ p {
     text-align: left;
 }
 
-.footer-text {
-    min-width: 264px;
-}
-
 .footer-media-text {
    text-align: left;
 }
 
 .media {
     margin-left: 0;
+}
+.footer-logo-icon-wrap {
+    gap: 24px;
 }
 
 .footer-form-wrap {
@@ -1273,11 +1285,15 @@ p {
  @media screen and (min-width: 1158px) {
   .container {
      min-width: 1158px;
+     padding: 0 16px;
   }
 
  /*-------------------- header -------------------*/
-
- .address-link {
+.address-list {
+    flex-direction: row;
+    gap: 40px;
+}
+.address-link {
      color: #434455;
      font-family: Roboto;
      font-size: 16px;
@@ -1286,7 +1302,7 @@ p {
  }
 
 /* ------------------------hero----------------------- */
-  .hero {
+.hero {
       padding: 188px 0 188px;
       margin: 0 auto;
       min-width: 1440px;
@@ -1321,6 +1337,19 @@ p {
   padding-top: 120px;
   padding-bottom: 120px;
   }
+.advantage-post-title {
+    font-family: Roboto;
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}  
+
+.advantage-text {
+    width: 264px;
+    font-weight: 400;
+}
 
 .icon-box {
    display: flex;
@@ -1369,20 +1398,18 @@ p {
 
 /*------------------- footer -------------------*/
 .footer {
-    padding: 100px 159px 100px 156px;
+    padding: 100px 0 100px;
 }
 .footer .container {
     flex-direction: row;
-}
-.footer-text {
-    margin-bottom: 0;
-}
-.media {
-    margin-left: 120px;
+    align-items: baseline;
 }
 
-.footer-form-wrap {
-    margin-left: auto;
-    margin-right: 0;
+.footer-logo-icon-wrap {
+    gap: 120px;
+}
+
+.footer-text {
+    width: 264px;
 }
  }
