@@ -48,7 +48,7 @@
     </button>
 </div>
 <!-------------------- MOBILE MENU -------------------->
-<div class="mob-menu">
+<div class="mob-menu is-open">
      
          <button type="button" class="mob-menu-close-btn">
              <svg width="8" height="8" class="menu-close-icon">
@@ -730,7 +730,7 @@
 </footer>
 <!--------------------- modal window  -------------------->
 
- <div class="modal">
+ <div class="modal is-open">
    <div class="modal-window">
       <button class="modal-close-btn" type="button">
           <svg class="close-icon" width="8" height="8">
@@ -776,32 +776,38 @@
         </div>
      </div>
     
- <label class="label-text" for="user-comment">Comment</label>
-   <div class="modal-comment-wrap">
+<div class="modal-comment-wrap">
+  <label class="label-text" for="user-comment">Comment</label>
       <textarea name="user-comment"
           id="user-comment"
           class="textarea-input"
           placeholder="Text input"></textarea>
  </div>
     
-<div class="checkbox-input-wrap">
-    <input type="checkbox"
-        name="user-privacy"
-        class="check-input visually-hidden"   
-        value="true"
-        id="user-privacy"
-        />
- <label class="label-text" for="user-privacy">
-     <span class="check">
-         <svg class="check-icon" width="10" height="8">
-             <use href="./images/icons.svg#icon-check"></use>
-         </svg>
-     </span> 
-     I accept the terms and conditions of the
-     <a class="label-link" href="">Privacy Policy</a>
- </label>
+<div>
+    <div class="checkbox-input-wrap">
+        <input type="checkbox"
+            name="user-privacy"
+            class="check-input visually-hidden"   
+            value="true"
+            id="user-privacy"
+            />
+    <label class="label-text reset" for="user-privacy">
+    <div>
+            <span class="check">
+                <svg class="check-icon" width="10" height="8">
+                    <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+         </span> 
+    </div>
+      <div>
+                I accept the terms and conditions of the
+                <a class="label-link" href="">Privacy Policy</a>
+      </div>
+         </label>
+    </div>
+        <button type="submit" class="modal-btn">Send</button>
 </div>
-    <button type="submit" class="modal-btn">Send</button>
 </form>
   </div> 
 </div> 

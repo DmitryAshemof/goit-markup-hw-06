@@ -184,6 +184,9 @@ p {
     margin-bottom: auto;
 }
 /*------------------------- mobile menu -------------------------*/
+.mob-menu.is-open {
+    transform: translateX(0);
+}
 
 .mob-menu {
     display: flex;
@@ -192,19 +195,22 @@ p {
     width: 100%;
     height: 100%;
     top: 0;
-    padding: 24px 24px 40px 16px;
+    left: 0;
+    padding: 72px 16px 40px 16px;
     background-color: #fff;
     overflow: auto;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 250ms;
+   
     
 }
 
 .mob-menu-close-btn {
-    display: block;
-    margin-left: auto;
-    margin-bottom: 24px;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
     background-color: transparent;
     border: 1px solid #E7E9FC;
     border-radius: 50px;
@@ -324,9 +330,8 @@ p {
 
   .main-title {
      display: block;
-     padding: 0 16px;
      text-align: center;
-     max-width: 288px;
+     max-width: 200px;
      margin: 0 auto;
      /* font-size: 56px; */
      /* letter-spacing: 0.02em; */
@@ -424,6 +429,7 @@ p {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
+    text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2E2F42;
@@ -860,17 +866,21 @@ p {
  
 /* -----footer modal----- */
 
+.modal.is-open {
+transform: translateY(0);
+}
+
 .modal {
-    display: none;
     position: fixed;
-    /* display: flex; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding: 24px;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    transform: translateY(100%);
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);        
@@ -901,11 +911,8 @@ p {
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left: auto;
     top: 24px;
     right: 24px;
-    left: 24px;
-    padding: 0;
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -928,7 +935,7 @@ p {
 
 .modal-title {
     /* min-width: 360px; */
-    width: 256px;
+    /* width: 256px; */
     text-align: center;
     margin-bottom: 16px;
     font-size: 16px;
@@ -940,20 +947,26 @@ p {
 
 .footer-modal {
     display: flex;
+    gap: 8px;
     flex-direction: column;
 }
 
+
 .label-text {
-    display: block;
+    display: flex;
     align-items: center;
     margin-bottom: 4px;
+    gap: 8px;
+    min-width: 246px;
     /* margin-top: 8px; */
     font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: var(--LIGHT-SLATE, #8E8F99);
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #8E8F99;
 }
-
+.reset {
+    margin-bottom: 0;
+}
 /* ------input------ */
 
 .modal-icon-wrap {
@@ -985,13 +998,13 @@ p {
 }
 
 .modal-input-wrap {   
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     position: relative;
 }
 
-.modal-comment-wrap {
+/* .modal-comment-wrap {
     margin-bottom: 16px;
-}
+} */
 
 .modal-icon {
     position: absolute;
@@ -999,7 +1012,6 @@ p {
     top: 50%;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----textarea----- */
@@ -1045,10 +1057,11 @@ p {
 }
 
 .check {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
+  /* margin-right: 8px; */
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -1059,9 +1072,15 @@ p {
               fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.check-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .label-link {
-    margin-left: 4px;
+    /* margin-left: 4px; */
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.48px;
@@ -1200,18 +1219,15 @@ p {
  }
 
  .advantage-post-title {
-     color: #2E2F42;
      font-family: Roboto;
-     text-align: center;
      font-size: 36px;
      font-weight: 700;
      line-height: 1.1;
+     text-align: left;
+     color: #2E2F42;
      text-transform: capitalize;
  }
 
-.advantage-text {
-     max-width: 356px;
- }
 /*------------------------- team -------------------------- */
 
 .team-list {
@@ -1285,6 +1301,9 @@ p {
   }
 .modal-title {
     width: 360px;
+}
+.label-link {
+    margin-left: 4px;
 }
  }
 
