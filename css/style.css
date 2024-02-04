@@ -663,7 +663,7 @@ p {
 
 
 
- /* FOOTER */
+ /*======================== FOOTER ========================*/
 
  .footer {
   
@@ -675,14 +675,21 @@ p {
  .footer .container {
     display: flex;
     flex-direction: column;
+    row-gap: 72px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     /* align-items: baseline; */
  }
 
+.footer-logo-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+}
+
 .footer-logo-wrap {
-    /* margin-right: 120px; */
+
    
 }
 
@@ -1238,6 +1245,7 @@ p {
 
 .footer-logo-icon-wrap {
     display: flex;
+    flex-direction: row;
 }
 
 .footer-logo {
